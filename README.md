@@ -1,7 +1,15 @@
-# style-guide
-"Style guide": https://style-guide-site.netlify.com/
+# Style Guide
 
-##Per accedere alla style guide in locale
+https://style-guide-site.netlify.com
 
-Bundle exec middleman server
-http://127.0.0.1:4567/
+## Setup locale
+
+```
+$ bundle exec middleman server
+```
+
+Apri il browser all'indirizzo http://127.0.0.1:4567
+
+## Licenza
+
+AGPLv3

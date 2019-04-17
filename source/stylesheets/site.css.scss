@@ -1,1 +1,94 @@
+.font {
+  display:block;
+  float: left;
+}
+.title {
+  font-family: 'Bitter', serif;
+  font-size: 40px;
+}
+.text {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 20px;
+}
 
+.color-grid {
+  display: table-row;
+}
+
+.palette-color__preview {
+  width: 3em;
+  height: 3em;
+  border: 1px solid lightgrey;
+  margin: 5px;
+  grid-area: Color;
+  display: table-cell;
+}
+
+.palette-color__hex{
+  display: table-cell;
+  padding: 4rem 10px;
+
+}
+
+
+.palette-color__description {
+  display: table-cell;
+  padding: .4rem 10px
+}
+
+
+.palette-color--photo-description-button-background-footer-text .palette-color__preview {
+  background-color: #FFFFFF;
+}
+
+.palette-color--site-background .palette-color__preview {
+  background-color: #FFFEFE;
+}
+
+.palette-color--selected-button-background .palette-color__preview {
+  background-color: #E2E2E2;
+}
+
+.palette-color--preview-text .palette-color__preview {
+  background-color: #D3D3D3;
+}
+
+.palette-color--footer-background .palette-color__preview {
+  background-color: #505151;
+}
+
+.palette-color--site-text .palette-color__preview {
+  background-color: #282A2E;
+}
+
+.palette-color--photo-background-timeline-icon .palette-color__preview {
+  background-color: #101010;
+}
+
+.palette-color--selected-link .palette-color__preview {
+  background-color: #9AB0F5;
+}
+
+.palette-color--link .palette-color__preview {
+  background-color: #1C60E8;
+}
+
+.palette-color--used-link .palette-color__preview {
+  background-color: #6549F8;
+}
+
+.palette-color--primary-color-one .palette-color__preview {
+  background-color: #005080;
+}
+
+.palette-color--primary-color-two .palette-color__preview {
+  background-color: #47AB6C;
+}
+
+.palette-color--primary-color-three .palette-color__preview {
+  background-color: #F2B134;
+}
+
+.palette-color--primary-color-four .palette-color__preview {
+  background-color: #E2482E;
+}

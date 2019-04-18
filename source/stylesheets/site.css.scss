@@ -12,30 +12,29 @@
 }
 
 .color-grid {
-  display: table-row;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}
+
+.palette-color {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3rem max-content auto;
+  justify-items: start;
+  grid-gap: 1rem;
 }
 
 .palette-color__preview {
-  width: 3em;
-  height: 3em;
-  border: 1px solid lightgrey;
-  margin: 5px;
-  grid-area: Color;
-  display: table-cell;
+  width: 40px;
+  height: 80px;
+  border: 1px solid #ccc;
 }
 
-.palette-color__hex{
-  display: table-cell;
-  padding: 4rem 10px;
-
+.palette-color__hex {
+  font-weight: bold;
+  font-family: sans-serif;
 }
-
-
-.palette-color__description {
-  display: table-cell;
-  padding: .4rem 10px
-}
-
 
 .palette-color--photo-description-button-background-footer-text .palette-color__preview {
   background-color: #FFFFFF;
@@ -63,18 +62,6 @@
 
 .palette-color--photo-background-timeline-icon .palette-color__preview {
   background-color: #101010;
-}
-
-.palette-color--selected-link .palette-color__preview {
-  background-color: #9AB0F5;
-}
-
-.palette-color--link .palette-color__preview {
-  background-color: #1C60E8;
-}
-
-.palette-color--used-link .palette-color__preview {
-  background-color: #6549F8;
 }
 
 .palette-color--primary-color-one .palette-color__preview {

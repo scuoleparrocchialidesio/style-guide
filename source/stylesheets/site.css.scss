@@ -4,11 +4,18 @@
 }
 .title {
   font-family: 'Bitter', serif;
-  font-size: 40px;
+  text-align: center;
 }
 .text {
   font-family: 'Libre Baskerville', serif;
-  font-size: 20px;
+  text-align: center;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap:1rem;
+  align-content: center;
 }
 
 .color-grid {

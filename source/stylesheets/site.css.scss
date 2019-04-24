@@ -1,14 +1,35 @@
-.font {
+.font-site {
   display:block;
   float: left;
 }
+
+.font-size {
+  text-align: right;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 11px;
+  padding: 1em;
+}
+
 .title {
   font-family: 'Bitter', serif;
   text-align: center;
+  margin: 5px lightgrey;
 }
 .text {
   font-family: 'Libre Baskerville', serif;
   text-align: center;
+}
+
+.test-title{
+  border-style: solid;
+  border-color: lightgrey;
+  border-width: 2px;
+}
+
+.test-text {
+  border-style: solid;
+  border-color: lightgrey;
+  border-width: 2px;
 }
 
 .logo {

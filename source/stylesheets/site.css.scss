@@ -1,6 +1,21 @@
-.font-site {
-  display:block;
-  float: left;
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.style-component {
+  padding: 1rem;
+}
+
+.style-component h1 {
+  border-right: 2px solid #ccc;
+  padding: 0 0.5rem;
+  border-left: 2px solid #ccc;
+  display: inline-block;
+}
+
+.main-title {
+  text-align: center;
 }
 
 .font-size {
@@ -15,28 +30,36 @@
   text-align: center;
   margin: 5px lightgrey;
 }
+
 .text {
   font-family: 'Libre Baskerville', serif;
-  text-align: center;
 }
 
-.test-title{
+.test-title {
+  padding: 1rem;
   border-style: solid;
   border-color: lightgrey;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 .test-text {
+  padding: 1rem;
   border-style: solid;
   border-color: lightgrey;
-  border-width: 2px;
+  border-width: 1px;
 }
 
-.logo {
+.logo-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap:1rem;
   align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.logo-wrapper figcaption {
+  text-align: center;
 }
 
 .color-grid {

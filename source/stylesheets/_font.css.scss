@@ -1,0 +1,57 @@
+.font-size {
+  text-align: center;
+  font-size: 1rem;
+  grid-column: 1 / 3;
+}
+
+.font-comparison {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 1rem;
+}
+
+.test-title {
+  margin: 0;
+}
+
+.font-name {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.title-example {
+  text-align: center;
+}
+.font-example--title-a.test-title {
+  font-family: 'Bitter', serif;
+}
+
+.font-example--title-b.test-title {
+  font-family: 'Noto Serif', serif;
+}
+
+.font-example--text-a {
+  font-family: 'Lato', sans-serif;
+}
+
+.font-example--text-b {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.test-title {
+  margin: 0;
+  display: flex;
+  align-items:  center;
+  padding: 1rem;
+  border-style: solid;
+  border-color: lightgrey;
+  border-width: 1px;
+}
+
+.test-text {
+  padding: 1rem;
+  border-style: solid;
+  border-color: lightgrey;
+  border-width: 1px;
+}

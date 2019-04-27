@@ -1,0 +1,68 @@
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 1rem;
+}
+
+.palette-color {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 3rem max-content auto;
+  justify-items: start;
+  grid-gap: 1rem;
+}
+
+.palette-color__preview {
+  width: 40px;
+  height: 80px;
+  border: 1px solid #ccc;
+}
+
+.palette-color__hex {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.palette-color--photo-description-button-background-footer-text .palette-color__preview {
+  background-color: #FFFFFF;
+}
+
+.palette-color--site-background .palette-color__preview {
+  background-color: #FFFEFE;
+}
+
+.palette-color--selected-button-background .palette-color__preview {
+  background-color: #E2E2E2;
+}
+
+.palette-color--preview-text .palette-color__preview {
+  background-color: #D3D3D3;
+}
+
+.palette-color--footer-background .palette-color__preview {
+  background-color: #505151;
+}
+
+.palette-color--site-text .palette-color__preview {
+  background-color: #282A2E;
+}
+
+.palette-color--photo-background-timeline-icon .palette-color__preview {
+  background-color: #101010;
+}
+
+.palette-color--primary-color-one .palette-color__preview {
+  background-color: #005080;
+}
+
+.palette-color--primary-color-two .palette-color__preview {
+  background-color: #47AB6C;
+}
+
+.palette-color--primary-color-three .palette-color__preview {
+  background-color: #F2B134;
+}
+
+.palette-color--primary-color-four .palette-color__preview {
+  background-color: #E2482E;
+}

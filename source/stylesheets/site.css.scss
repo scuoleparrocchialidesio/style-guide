@@ -1,4 +1,19 @@
-body, html {
+$content-width: 40rem;
+$breakpoint-xs: 440px;
+$breakpoint-sm: 600px;
+$font-color: #282A2E;
+$background-footer: #505151;
+$breakpoint: 400px;
+$dark-gray: #dcdcdc;
+$light-gray: #efefef;
+$white: white;
+$black: black;
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -23,3 +38,7 @@ body, html {
 @import '_font.css.scss';
 
 @import '_color-palette.css.scss';
+
+@import '_table.css.scss';
+
+@import '_gallery.css.scss';

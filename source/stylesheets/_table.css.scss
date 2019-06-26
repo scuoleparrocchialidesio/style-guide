@@ -1,0 +1,82 @@
+.table {
+  text-align: center;
+  display: grid;
+  border-left: 3px solid $black;
+  border-bottom: 3px solid $black;
+  border-right: 3px solid $black;
+  box-shadow: 2px 2px 2px $dark-gray;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.table thead {
+  background: $black;
+  color: $white;
+  font-family: 'Noto Serif', serif;
+  text-transform: uppercase;
+}
+
+.table thead tr {
+  display: grid;
+}
+
+.table thead th {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.table tbody {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 0.25rem;
+  padding: 0.25rem;
+}
+
+.table tbody tr {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-gap: 0.25rem;
+  padding: 0.25rem;
+  background: $light-gray;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.table td {
+  justify-content: center;
+}
+
+.table td:nth-child(2n+1) {
+    font-weight: bold;
+}
+
+@media (min-width: $breakpoint) {
+  .table tbody tr {
+    grid-gap: 0.25rem;
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+    background: $white;
+  }
+
+  .table th {
+    grid-column: 1/3;
+  }
+
+  .table td {
+    padding: 0.5rem;
+    background: $light-gray;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 1px 1px 2px $dark-gray;
+  }
+
+  .table tbody {
+    display: grid;
+    padding: 0.25rem;
+    grid-gap: 0.25rem;
+  }
+
+  .table td:nth-child(2n+1) {
+    background: $dark-gray;
+  }
+}

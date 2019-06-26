@@ -1,0 +1,39 @@
+.gallery {
+  padding: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: min-content;
+  justify-items: center;
+  margin: 2rem;
+}
+
+.gallery-card {
+  border: 3px solid black;
+  background: black;
+  width: 100%;
+}
+
+.card__link {
+  display: block;
+}
+
+.card__image {
+  display: block;
+  padding: 0.25rem;
+  background: white;
+  width: 100%;
+}
+
+.card__description {
+  color: white;
+  padding: 0.25rem;
+  text-align: center;
+}
+
+figcaption {
+  color: $white;
+  padding: 0.25rem;
+  text-align: center;
+  font-family: 'Noto Serif', sans-serif
+}

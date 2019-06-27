@@ -9,8 +9,8 @@
 }
 
 .gallery-card {
-  border: 3px solid black;
-  background: black;
+  border: 3px solid $site-primary-color;
+  background: $site-primary-color;
   width: 100%;
 }
 
@@ -21,18 +21,21 @@
 .card__image {
   display: block;
   padding: 0.25rem;
-  background: white;
+  background: $site-background;
   width: 100%;
 }
 
 .card__description {
-  color: white;
+  color: $alternative-color-font;
   padding: 0.25rem;
   text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 figcaption {
-  color: $white;
+  color: $alternative-color-font;
   padding: 0.25rem;
   text-align: center;
   font-family: 'Noto Serif', sans-serif

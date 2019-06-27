@@ -1,17 +1,17 @@
 .table {
   text-align: center;
   display: grid;
-  border-left: 3px solid $black;
-  border-bottom: 3px solid $black;
-  border-right: 3px solid $black;
-  box-shadow: 2px 2px 2px $dark-gray;
+  border-left: 3px solid $site-primary-color;
+  border-bottom: 3px solid $site-primary-color;
+  border-right: 3px solid $site-primary-color;
+  box-shadow: 2px 2px 2px $site-secondary-color-two;
   margin-left: 20%;
   margin-right: 20%;
 }
 
 .table thead {
-  background: $black;
-  color: $white;
+  background: $site-primary-color;
+  color: $site-background;
   font-family: 'Noto Serif', serif;
   text-transform: uppercase;
 }
@@ -37,7 +37,7 @@
   grid-template-rows: 1fr;
   grid-gap: 0.25rem;
   padding: 0.25rem;
-  background: $light-gray;
+  background: $site-secondary-color-one;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -54,7 +54,7 @@
     grid-gap: 0.25rem;
     grid-template-columns: 1fr 1fr;
     padding: 0;
-    background: $white;
+    background: $site-background;
   }
 
   .table th {
@@ -63,11 +63,11 @@
 
   .table td {
     padding: 0.5rem;
-    background: $light-gray;
+    background: $site-secondary-color-one;
     display: flex;
     flex-direction: column;
     text-align: center;
-    box-shadow: 1px 1px 2px $dark-gray;
+    box-shadow: 1px 1px 2px $site-secondary-color-two;
   }
 
   .table tbody {
@@ -77,6 +77,6 @@
   }
 
   .table td:nth-child(2n+1) {
-    background: $dark-gray;
+    background: $site-secondary-color-two;
   }
 }

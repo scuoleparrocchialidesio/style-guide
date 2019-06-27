@@ -7,15 +7,23 @@
 .palette-color {
   display: grid;
   align-items: center;
-  grid-template-columns: 3rem max-content auto;
+  grid-template-columns: 1fr;
   justify-items: start;
   grid-gap: 1rem;
+  border: solid 1px $site-secondary-color-one;
+  justify-items: center;
+  text-align: center;
 }
 
 .palette-color__preview {
   width: 40px;
   height: 80px;
   border: 1px solid #ccc;
+}
+
+.palette-color__variable {
+  background-color: grey;
+  font-style: italic;
 }
 
 .palette-color__hex {

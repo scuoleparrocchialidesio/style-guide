@@ -49,7 +49,7 @@
     font-weight: bold;
 }
 
-@media (min-width: $dimension-column) {
+@media (min-width: $breakpoint-xs) {
   .table tbody tr {
     grid-gap: 0.25rem;
     grid-template-columns: 1fr 1fr;

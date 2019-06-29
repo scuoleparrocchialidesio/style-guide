@@ -1,4 +1,29 @@
-body, html {
+$content-width: 40rem;
+$dimension-column: 200px;
+$breakpoint-xs: 440px;
+$breakpoint-sm: 600px;
+$alternative-color-font: #FFFFFF;
+$site-background: #FFFEFE;
+$site-secondary-color-one: #EFEFEF;
+$site-secondary-color-two: #DCDCDC;
+$background-footer: #505151;
+$site-primary-color: #282A2E;
+
+@import '_logo.css.scss';
+
+@import '_font.css.scss';
+
+@import '_color-palette.css.scss';
+
+@import '_table.css.scss';
+
+@import '_gallery.css.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
 }
@@ -18,8 +43,7 @@ body, html {
   text-align: center;
 }
 
-@import '_logo.css.scss';
-
-@import '_font.css.scss';
-
-@import '_color-palette.css.scss';
+.breakpoint {
+  display: inline;
+  background-color: $site-secondary-color-two;
+}

@@ -1,0 +1,42 @@
+.gallery {
+  padding: 1rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax($dimension-column, 1fr));
+  grid-auto-rows: min-content;
+  justify-items: center;
+  margin: 2rem;
+}
+
+.gallery-card {
+  border: 3px solid $site-primary-color;
+  background: $site-primary-color;
+  width: 100%;
+}
+
+.card__link {
+  display: block;
+}
+
+.card__image {
+  display: block;
+  padding: 0.25rem;
+  background: $site-background;
+  width: 100%;
+}
+
+.card__description {
+  color: $alternative-color-font;
+  padding: 0.25rem;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+figcaption {
+  color: $alternative-color-font;
+  padding: 0.25rem;
+  text-align: center;
+  font-family: 'Noto Serif', sans-serif
+}

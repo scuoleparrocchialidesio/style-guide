@@ -1,0 +1,21 @@
+.button {
+  border: 2px solid $site-primary-color;
+  border-radius: 10px;
+  padding: 0.5rem;
+  text-align: center;
+  color: $site-primary-color;
+}
+
+.button:active,
+.button:visited {
+  color: $site-primary-color;
+}
+
+.button--card-action {
+  box-shadow: 1px 1px $site-primary-color;
+  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  text-transform: uppercase;
+  align-self: center;
+  width: min-width;
+}

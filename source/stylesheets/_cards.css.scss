@@ -1,0 +1,48 @@
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($dimension-column, 1fr));
+  grid-auto-rows: min-content;
+  justify-items: center;
+  grid-gap: 2rem;
+  margin: 2rem 0;
+}
+
+.section-card {
+  border: 2px solid $site-primary-color;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.section-card__cover {
+  display: block;
+  max-width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.section-card__title {
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  border-bottom: 2px solid $site-primary-color;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.section-card__date {
+  display: flex;
+  align-self: start;
+}
+
+.section-card__body {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.section-card__text {
+}

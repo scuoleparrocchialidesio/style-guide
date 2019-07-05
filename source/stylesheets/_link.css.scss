@@ -1,0 +1,11 @@
+a {
+  color: $site-primary-color;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

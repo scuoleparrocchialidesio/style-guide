@@ -1,0 +1,30 @@
+.example-container {
+  padding: 1rem;
+  margin: 1rem 0;
+  border: 2px solid $site-primary-color;
+  background: $site-secondary-color-one;
+}
+
+.example {
+  padding: 2rem;
+  background: $site-background;
+  border: 2px dashed $example-border-color;
+  margin: 1rem 0;
+}
+
+.example--xs {
+  max-width: $breakpoint-xs;
+}
+
+.example--sm {
+  max-width: $breakpoint-sm;
+}
+
+pre {
+  background: white;
+  overflow: scroll;
+  border: 2px dashed $example-code-border-color;
+  padding: 1rem;
+  font-size: 1.2rem;
+  max-width: 40rem;
+}

@@ -8,16 +8,18 @@ $site-secondary-color-one: #EFEFEF;
 $site-secondary-color-two: #DCDCDC;
 $background-footer: #505151;
 $site-primary-color: #282A2E;
+$example-border-color: #5098c3;
+$example-code-border-color: #344bb1;
 
 @import '_logo.css.scss';
-
+@import '_link.css.scss';
 @import '_font.css.scss';
-
 @import '_color-palette.css.scss';
-
 @import '_table.css.scss';
-
 @import '_gallery.css.scss';
+@import '_buttons.css.scss';
+@import '_cards.css.scss';
+@import '_examples.css.scss';
 
 * {
   box-sizing: border-box;
@@ -32,7 +34,7 @@ html, body {
   padding: 1rem;
 }
 
-.style-component h1 {
+.style-component > h1 {
   border-right: 2px solid #ccc;
   padding: 0 0.5rem;
   border-left: 2px solid #ccc;

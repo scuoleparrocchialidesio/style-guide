@@ -350,3 +350,204 @@
     $breakpoint-sm: 600px <br />
   </div>
 </section>
+
+<section class="style-component">
+  <h1>Link</h1>
+  <p>È lo stile applicato a tutti i link. Dotato di sottolineatura solo quando il mouse passa sopra.</p>
+
+  <div class="example-container">
+    <div class="example">
+      <a href="https://wikipedia.org">Wikipedia</a>
+    </div>
+  </div>
+</section>
+
+<section class="style-component">
+  <h1>Bottone</h1>
+
+  <div class="example-container">
+    <p>È lo stile predefinito dei bottoni. Vedi le varianti definite in seguito.</p>
+    <p>Classe: <code>.button</code></p>
+    <pre>
+&lt;a class=&quot;button&quot; href=&quot;$url&quot;&gt;
+  $label
+&lt;/a&gt;
+    </pre>
+    <div class="example">
+      <a class="button" href="https://wikipedia.org">Wikipedia</a>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <p>Variante usata per mostrare l'azione una scheda.</p>
+    <p>Classe: <code>.button.button--card-action</code></p>
+    <pre>
+&lt;a class=&quot;button button--card-action&quot; href=&quot;$url&quot;&gt;
+  $label
+&lt;/a&gt;
+    </pre>
+    <div class="example">
+      <a class="button button--card-action" href="https://wikipedia.org">Wikipedia</a>
+    </div>
+  </div>
+</section>
+
+<section class="style-component">
+  <h1>Card</h1>
+
+  <div class="example-container">
+    <p>Card senza immagine</p>
+    <pre>
+&lt;section class=&quot;section-card&quot;&gt;
+  &lt;h1 class=&quot;section-card__title&quot;&gt;$title&lt;/h1&gt;
+  &lt;p class=&quot;section-card__date&quot;&gt;$date&lt;/p&gt;
+  &lt;div class=&quot;section-card__body&quot;&gt;
+    &lt;p class=&quot;section-card__text&quot;&gt;
+      $text
+    &lt;/p&gt;
+    &lt;a href=&quot;$url&quot; class=&quot;button button--card-action&quot;&gt;
+      $label
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+    </pre>
+
+    <p>Comportamento card senza immagine nel caso mobile.</p>
+    <div class="example example--xs">
+      <section class="section-card">
+        <h1 class="section-card__title">Progetto 1</h1>
+        <p class="section-card__date">03/07/2019</p>
+        <div class="section-card__body">
+          <p class="section-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <%= link_to 'Scopri il progetto', 'https://wikipedia.org', class: 'button button--card-action' %>
+        </div>
+      </section>
+    </div>
+
+    <p>Comportamento card senza immagine nel caso desktop.</p>
+    <div class="example example--sm">
+      <section class="section-card">
+        <h1 class="section-card__title">Progetto 1</h1>
+        <p class="section-card__date">03/07/2019</p>
+        <div class="section-card__body">
+          <p class="section-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <%= link_to 'Scopri il progetto', 'https://wikipedia.org', class: 'button button--card-action' %>
+        </div>
+      </section>
+    </div>
+
+    <p>Card con immagine</p>
+    <pre>
+&lt;section class=&quot;section-card&quot;&gt;
+  &lt;img src=&quot;$url&quot; class=&quot;section-card__cover&quot; alt=&quot;$description&quot; /&gt;
+  &lt;h1 class=&quot;section-card__title&quot;&gt;$title&lt;/h1&gt;
+  &lt;p class=&quot;section-card__date&quot;&gt;$date&lt;/p&gt;
+  &lt;div class=&quot;section-card__body&quot;&gt;
+    &lt;p class=&quot;section-card__text&quot;&gt;
+      $text
+    &lt;/p&gt;
+    &lt;a href=&quot;$url&quot; class=&quot;button button--card-action&quot;&gt;
+      $label
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+    </pre>
+
+    <p>Comportamento della card con immagine nel caso mobile.</p>
+    <div class="example example--xs">
+      <section class="section-card">
+        <%= image_tag 'https://images.unsplash.com/photo-1542627250-da40d2d18228?fit=crop', class: 'section-card__cover' %>
+        <h1 class="section-card__title">Progetto 1</h1>
+        <p class="section-card__date">03/07/2019</p>
+        <div class="section-card__body">
+          <p class="section-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <%= link_to 'Scopri il progetto', 'https://wikipedia.org', class: 'button button--card-action' %>
+        </div>
+      </section>
+    </div>
+
+    <p>Comportamento della card con immagine nel caso desktop.</p>
+    <div class="example example--sm">
+      <section class="section-card">
+        <%= image_tag 'https://images.unsplash.com/photo-1542627250-da40d2d18228?fit=crop', class: 'section-card__cover' %>
+        <h1 class="section-card__title">Progetto 1</h1>
+        <p class="section-card__date">03/07/2019</p>
+        <div class="section-card__body">
+          <p class="section-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <%= link_to 'Scopri il progetto', 'https://wikipedia.org', class: 'button button--card-action' %>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <p>Un contenitore fluido di card che include una card semplice, senza immagine.</p>
+    <p>Classe del contenitore: <code>.card-container</code></p>
+
+    <pre>
+&lt;div class=&quot;card-container&quot;&gt;
+  &lt;div class=&quot;section-card&quot;&gt;
+    ...
+  &lt;/div&gt;
+  &lt;div class=&quot;section-card&quot;&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+    </pre>
+
+    <p>Contenitore con card sprovviste di immagine.</p>
+    <div class="example">
+      <div class="card-container">
+        <div class="section-card">
+          <h1 class="section-card__title">Progetti</h1>
+          <div class="section-card__body">
+            <p class="section-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <%= link_to 'Scopri', 'https://wikipedia.org', class: 'button button--card-action' %>
+          </div>
+        </div>
+        <div class="section-card">
+          <h1 class="section-card__title">Eventi</h1>
+          <div class="section-card__body">
+            <p class="section-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <%= link_to 'Scopri', 'https://archive.org', class:'button button--card-action' %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p>Contenitore con card dotate di immagine.</p>
+    <div class="example">
+      <div class="card-container">
+        <section class="section-card">
+          <%= image_tag 'https://images.unsplash.com/photo-1542627250-da40d2d18228?fit=crop', class: 'section-card__cover' %>
+          <h1 class="section-card__title">Progetto 1</h1>
+          <p class="section-card__date">03/07/2019</p>
+          <div class="section-card__body">
+            <p class="section-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <%= link_to 'Scopri il progetto', 'https://wikipedia.org', class: 'button button--card-action' %>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <%= image_tag 'https://images.unsplash.com/photo-1542627250-da40d2d18228?fit=crop', class: 'section-card__cover' %>
+          <h1 class="section-card__title">Progetto 2</h1>
+          <p class="section-card__date">01/05/2020</p>
+          <div class="section-card__body">
+            <p class="section-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <%= link_to 'Scopri il progetto', 'https://wikipedia.org', class: 'button button--card-action' %>
+          </div>
+        </section>
+
+        <section class="section-card">
+          <%= image_tag 'https://images.unsplash.com/photo-1542627250-da40d2d18228?fit=crop', class: 'section-card__cover' %>
+          <h1 class="section-card__title">Progetto 3</h1>
+          <p class="section-card__date">25/09/2083</p>
+          <div class="section-card__body">
+            <p class="section-card__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <%= link_to 'Scopri il progetto', 'https://wikipedia.org', class: 'button button--card-action' %>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</section>

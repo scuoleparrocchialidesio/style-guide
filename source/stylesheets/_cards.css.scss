@@ -19,7 +19,7 @@
 .section-card__cover {
   display: block;
   max-width: 100%;
-  margin-top: 2rem;
+  margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
@@ -34,6 +34,7 @@
 .section-card__date {
   display: flex;
   align-self: start;
+  margin: 0;
 }
 
 .section-card__body {

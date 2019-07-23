@@ -306,37 +306,50 @@
 <section class="style-component">
   <h1>Galleria</h1>
   <p>Il seguente esempio di galleria e formata da varie preview quadrate e un'anticipazione della descrizione, racchiuse da una cornice.</p>
-  <div class="gallery">
-    <figure class="gallery-card">
-      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
-        <%= image_tag 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?fit=crop&w=200&h=200', class: 'card__image' %>
-      <% end %>
-      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</figcaption>
-    </figure>
-    <figure class="gallery-card">
-      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
-        <%= image_tag 'https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba?fit=crop&w=200&h=200', class: 'card__image' %>
-      <% end %>
-      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</figcaption>
-    </figure>
-    <figure class="gallery-card">
-      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
-        <%= image_tag 'https://images.unsplash.com/photo-1484820540004-14229fe36ca4?fit=crop&w=200&h=200', class: 'card__image' %>
-      <% end %>
-      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</figcaption>
-    </figure>
-    <figure class="gallery-card">
-      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
-        <%= image_tag 'https://images.unsplash.com/photo-1457978535446-dcd58011ea54?fit=crop&w=200&h=200', class: 'card__image' %>
-      <% end %>
-      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</figcaption>
-    </figure>
-    <figure class="gallery-card">
-      <% link_to '/scuole/san_giorgio.html', class:'card__link' do %>
-        <%= image_tag 'https://images.unsplash.com/photo-1504169448388-60f322bebb2c?fit=crop&w=200&h=200', class: 'card__image' %>
-      <% end %>
-      <figcaption class="card__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</figcaption>
-    </figure>
+  <div class="gallery" data-gallery>
+    <% gallery = [
+      {
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.',
+        image_url: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b',
+      },
+      {
+        image_url: 'https://images.unsplash.com/photo-1504275107627-0c2ba7a43dba',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      },
+      {
+        image_url: 'https://images.unsplash.com/photo-1484820540004-14229fe36ca4',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      },
+      {
+        image_url: 'https://images.unsplash.com/photo-1457978535446-dcd58011ea54',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+      },
+      {
+        image_url: 'https://images.unsplash.com/photo-1504169448388-60f322bebb2c',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      },
+    ] %>
+    <% gallery.each_with_index do |item, index| %>
+      <figure class="gallery-card" data-gallery-item>
+        <% link_to item[:image_url], class:'card__link' do %>
+          <%= image_tag(
+            "#{item[:image_url]}?fit=crop&w=200&h=200",
+            class: 'card__image',
+            data: {
+              'gallery-image' => true,
+              'full-url' => item[:image_url],
+              'description' => item[:description],
+              index: index,
+              previous: index > 0 ? index - 1 : nil,
+              next: index < gallery.length - 1 ? index + 1 : nil,
+            }
+          ) %>
+        <% end %>
+        <figcaption class="card__description" data-gallery-description>
+          <%= item[:description] %>
+        </figcaption>
+      </figure>
+    <% end %>
   </div>
 </section>
 
@@ -548,6 +561,106 @@
           </div>
         </section>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="style-component">
+  <h1>Icone</h1>
+
+  <div class="example-container">
+    <div class="example example--sm">
+      <p>Categoria pedagogica</p>
+
+      <pre>
+        /images/peda-icon.jpg
+      </pre>
+      <%= image_tag 'peda-icon.jpg', style: 'max-width: 200px;' %>
+    </div>
+
+    <div class="example example--sm">
+      <p>Categoria amministrativa</p>
+
+      <pre>
+        /images/amm-icon.png
+      </pre>
+      <%= image_tag 'amm-icon.png', style: 'max-width: 200px;' %>
+    </div>
+  </div>
+</section>
+
+
+<section class="style-component">
+  <h1>Timeline</h1>
+
+  <div class="example-container">
+    <p>Componente che mostra la visualizzazione cronologica di eventi</p>
+
+    <pre>
+&lt;ol class=&quot;timeline&quot;&gt;
+  &lt;li&gt;
+    &lt;span class=&quot;timeline__label&quot;&gt;07-05-2019&lt;/span&gt;
+    &lt;div class=&quot;section-card timeline__card&quot;&gt;
+      &lt;h1 class=&quot;section-card__title&quot;&gt;Lorem ipsum&lt;/h1&gt;
+      &lt;img src=&quot;/images/amm-icon.png&quot; class=&quot;timeline__icon&quot; alt=&quot;Amm icon&quot;&gt;
+      &lt;p class=&quot;section-card__label&quot;&gt;Amministrazione&lt;/p&gt;
+      &lt;div class=&quot;section-card__body&quot;&gt;
+        &lt;p class=&quot;section-card__text&quot;&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+        &lt;a href=&quot;#&quot; class=&quot;button button--card-action&quot;&gt;Scopri&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;span class=&quot;timeline__label&quot;&gt;01-09-2019&lt;/span&gt;
+    &lt;div class=&quot;section-card timeline__card&quot;&gt;
+      &lt;h1 class=&quot;section-card__title&quot;&gt;Foo bar&lt;/h1&gt;
+      &lt;img src=&quot;/images/peda-icon.jpg&quot; class=&quot;timeline__icon&quot; alt=&quot;Peda icon&quot;&gt;
+      &lt;p class=&quot;section-card__label&quot;&gt;Pedagogia&lt;/p&gt;
+      &lt;div class=&quot;section-card__body&quot;&gt;
+        &lt;p class=&quot;section-card__text&quot;&gt;
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        &lt;/p&gt;
+        &lt;a href=&quot;#&quot; class=&quot;button button--card-action&quot;&gt;Scopri&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+    </pre>
+
+    <div class="example example--sm">
+      <ol class="timeline">
+        <li>
+          <span class="timeline__label">07-05-2019</span>
+          <div class="section-card timeline__card">
+            <h1 class="section-card__title">Lorem ipsum</h1>
+            <%= image_tag 'amm-icon.png', class: 'timeline__icon' %>
+            <p class="section-card__label">Amministrazione</p>
+            <div class="section-card__body">
+              <p class="section-card__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <%= link_to 'Scopri', '#', class:'button button--card-action' %>
+            </div>
+          </div>
+        </li>
+        <li>
+          <span class="timeline__label">01-09-2019</span>
+          <div class="section-card timeline__card">
+            <h1 class="section-card__title">Foo bar</h1>
+            <%= image_tag 'peda-icon.jpg', class: 'timeline__icon' %>
+            <p class="section-card__label">Pedagogia</p>
+            <div class="section-card__body">
+              <p class="section-card__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <%= link_to 'Scopri', '#', class:'button button--card-action' %>
+            </div>
+          </div>
+        </li>
+      </ol>
+
     </div>
   </div>
 </section>

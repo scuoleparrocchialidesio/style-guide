@@ -10,6 +10,7 @@ $background-footer: #505151;
 $site-primary-color: #282A2E;
 $example-border-color: #5098c3;
 $example-code-border-color: #344bb1;
+$lightbox-background: #282A2EEE;
 
 @import '_logo.css.scss';
 @import '_link.css.scss';
@@ -19,6 +20,7 @@ $example-code-border-color: #344bb1;
 @import '_gallery.css.scss';
 @import '_buttons.css.scss';
 @import '_cards.css.scss';
+@import '_timeline.css.scss';
 @import '_examples.css.scss';
 
 * {
@@ -48,4 +50,38 @@ html, body {
 .breakpoint {
   display: inline;
   background-color: $site-secondary-color-two;
+}
+
+.gallery-lightbox {
+  flex-direction: column;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #282A2EEE;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-lightbox__image {
+  border: 2px solid black;
+  max-width: 100%;
+  max-height: 50%;
+  border-radius: 4px;
+}
+
+.gallery-lightbox__description {
+  position: absolute;
+  color: white;
+  text-shadow: 1px 1px black;
+  bottom: 0;
+  background: #00000091;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+.hide {
+  display: none !important;
 }

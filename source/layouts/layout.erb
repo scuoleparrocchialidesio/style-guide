@@ -9,10 +9,15 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
     <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Style guide</title>
   </head>
   <body>
     <%= yield %>
+    <div class="gallery-lightbox hide" data-gallery-lightbox>
+      <img class="gallery-lightbox__image" src="#" alt="" data-gallery-image>
+      <p class="gallery-lightbox__description" data-gallery-description></p>
+    </div>
   </body>
 </html>

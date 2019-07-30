@@ -575,7 +575,7 @@
       <pre>
         /images/peda-icon.jpg
       </pre>
-      <%= image_tag 'peda-icon.jpg', style: 'max-width: 200px;' %>
+      <%= image_tag 'peda-icon.jpg', class: 'document-icon' %>
     </div>
 
     <div class="example example--sm">
@@ -584,11 +584,10 @@
       <pre>
         /images/amm-icon.png
       </pre>
-      <%= image_tag 'amm-icon.png', style: 'max-width: 200px;' %>
+      <%= image_tag 'amm-icon.png', class: 'document-icon' %>
     </div>
   </div>
 </section>
-
 
 <section class="style-component">
   <h1>Timeline</h1>
@@ -661,6 +660,64 @@
         </li>
       </ol>
 
+    </div>
+  </div>
+</section>
+
+<section class="style-component">
+  <h1>Date info</h1>
+
+  <div class="example-container">
+    <p>Mostra etichetta e data</p>
+
+    <pre>
+&lt;p class=&quot;date-info&quot;&gt;
+  &lt;span class=&quot;date-info__label&quot;&gt;
+    Creato il:
+  &lt;/span&gt;
+  &lt;span class=&quot;date-info__value&quot;&gt;
+    2019-07-30
+  &lt;/span&gt;
+&lt;/p&gt;
+    </pre>
+
+    <div class="example example--sm">
+      <p class="date-info">
+        <span class="date-info__label">
+          Creato il:
+        </span>
+        <span class="date-info__value">
+          2019-07-30
+        </span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="style-component">
+  <h1>Event info</h1>
+
+  <div class="example-container">
+    <p>Informazioni di riepilogo di un evento.</p>
+
+    <pre>
+&lt;div class=&quot;event-info&quot;&gt;
+  &lt;p class=&quot;event-info__date&quot;&gt;2019-07-30&lt;/p&gt;
+  &lt;div class=&quot;event-info__category&quot;&gt;
+    &lt;img src=&quot;/images/peda-icon.jpg&quot; class=&quot;document-icon&quot; alt=&quot;Peda icon&quot;&gt;
+    &lt;p class=&quot;event-info__category__label&quot;&gt;Pedagogico&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </pre>
+
+    <div class="example example--sm">
+      <div class="event-info">
+        <p class="event-info__date">2019-07-30</p>
+        <div class="event-info__category">
+          <%= image_tag '/images/peda-icon.jpg', class: 'document-icon' %>
+          <p class="event-info__category__label">Pedagogico</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>

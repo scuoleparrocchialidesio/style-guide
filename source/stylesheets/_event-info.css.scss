@@ -1,0 +1,22 @@
+.event-info {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.event-info__date {
+  margin: 0;
+}
+
+.event-info__category {
+  display: grid;
+  grid-template-rows: 1fr min-content;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+
+.event-info__category__label {
+    margin: 0;
+}
